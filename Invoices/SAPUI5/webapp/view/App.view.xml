@@ -1,0 +1,6 @@
+<mvc:XMLView controllerName="logaligroup.SAPUI5.controller.App" id="myViewId"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Button id="myButtonId" text= "{i18n>showHelloButtonText}" press=".onShowHello"></Button>
+    <Input id="myInputId" value="{/recipient/name}" description="Hello {/recipient/name}" width="60%"></Input>
+</mvc:XMLView>
