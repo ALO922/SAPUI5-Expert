@@ -1,6 +1,15 @@
-<mvc:XMLView controllerName="logaligroup.SAPUI5.controller.App" id="myViewId"
+<mvc:XMLView controllerName="logaligroup.SAPUI5.controller.App"
     xmlns="sap.m"
-    xmlns:mvc="sap.ui.core.mvc">
-    <Button id="myButtonId" text= "{i18n>showHelloButtonText}" press=".onShowHello"></Button>
-    <Input id="myInputId" value="{/recipient/name}" description="Hello {/recipient/name}" width="60%"></Input>
+    xmlns:mvc="sap.ui.core.mvc" displayBlock= "true">
+    <Shell>
+        <App>
+            <pages>
+                <Page title="{i18n>appTitle}">
+                    <content>
+                        <mvc:XMLView viewName="logaligroup.SAPUI5.view.HelloPanel"/>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
 </mvc:XMLView>
