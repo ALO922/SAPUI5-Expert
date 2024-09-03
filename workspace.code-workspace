@@ -1,1 +1,10 @@
-{"folders":[{"path":"Invoices"}],"settings":{}}
+{"folders":[
+        {
+            "path": "Invoices"
+        }
+    ],
+    "settings": {
+        "liveServer.settings.port": 5503,
+        "liveServer.settings.multiRootWorkspaceName": "SAPUI5-Expert-10_Mock_Server"
+    }
+}
