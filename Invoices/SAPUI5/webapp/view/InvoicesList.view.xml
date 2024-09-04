@@ -6,7 +6,7 @@
           class="sapUiResposiveMargin" 
           width="auto" 
           items="{ path : 'invoices>/Invoices',
-                   sorter : { path : 'ShipperName',
+                   sorter : { path : 'ProductName',
                               group : true }
                  }">
         <headerToolbar>
@@ -25,7 +25,9 @@
                                           showMeasure : false
                                       }}"
                             numberUnit="{currency>/usd}"
-                            numberState="{= ${invoices>ExtendedPrice} > 50 ? 'Success' : 'Error'}">
+                            numberState="{= ${invoices>ExtendedPrice} > 50 ? 'Success' : 'Error'}"
+                            type="Navigation"
+                            press="navigateToDetails">
             </ObjectListItem>
         </items>
     </List>
