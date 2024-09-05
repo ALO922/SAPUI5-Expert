@@ -12,11 +12,12 @@ sap.ui.define([
 
             onInit: function () {
 
+                this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
             },
 
-            onOpenDialogHeader: function() {
+            onOpenDialogHeader: function () {
                 this.getOwnerComponent().openHelloDialog();
             }
-            
+
         });
     });
