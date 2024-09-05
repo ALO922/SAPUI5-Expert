@@ -14,6 +14,7 @@ sap.ui.define([
 
         return Controller.extend("logaligroup.SAPUI5.controller.Details", {
             _onObjectMatch: function (oEvent) {
+                this.byId("rating").reset();
                 this.getView().bindElement({
                     path: "/" + window.decodeURIComponent(oEvent.getParameter("arguments").invoicePath),
                     model: "invoices"
@@ -35,6 +36,13 @@ sap.ui.define([
                     const oRouter = UIComponent.getRouterFor(this);
                     oRouter.navTo("RouteApp", {}, true)
                 }
+            },
+
+            onRatingChange: function (oEvent) {
+                const fValue = oEvent.getParameter("value");
+                const oResourceBundle = this.getView().getModel("i18n").getResourceBundle();
+
+                sap.m.MessageToast.show(oResourceBundle.getText("ratingConfirmation", [fValue]));
             }
         });
     });
